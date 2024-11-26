@@ -1,0 +1,17 @@
+npx --no -- commitlint --edit "$1" ||
+(
+        echo '😡❌😡 Failed Commit check. 😡❌😡...
+            write a normal commit based on these prefixes `
+          "ci:",
+		  "chore:",
+		  "docs:",
+		  "feat:",
+		  "fix:",
+		  "ui",
+		  "refactor:",
+		  "revert:",
+		  "style:",
+		  "merge:"
+        '
+        false;
+)
